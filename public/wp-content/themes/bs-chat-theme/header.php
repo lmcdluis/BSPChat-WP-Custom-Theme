@@ -57,7 +57,7 @@ This is Template for the header
                 )
                 ?>
                 <div class="mx-5" id="button-demo-header">
-                <?php get_template_part('/template-parts/button-action', '', array('label' => 'Agendar Demo', 'url' => '/')) ?>
+                <?php get_template_part('/template-parts/button-action', '', array('label' => 'Agendar Demo', 'url' => '#contact-modal', 'classButton' => 'form-button')) ?>
                 </div>
             </div>
         </nav>

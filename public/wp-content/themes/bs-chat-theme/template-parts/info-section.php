@@ -1,5 +1,4 @@
 <?php
-
 /**
  *  Template for information section with image
  * @package bs-chat
@@ -10,6 +9,8 @@
 $id_post = $args['id_post'];
 $class = $args['revert_class'];
 $label = $args['label'];
+$url = $args['url'];
+$classButton = $args['classButton'];
 $data = new WP_Query(array(
     'post_type' => 'post',
     'category_name' => get_the_category($args['id_post'])[0]->name,
@@ -29,7 +30,7 @@ $data = new WP_Query(array(
                         <div class="col-lg-6 col-xs-12 text-center">
                             <h2 class="info-section-title"><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
-                            <div><?php get_template_part('/template-parts/button-action', '', array('label' => $label, 'url' => get_field('url_video', $data->ID)))?></div>
+                            <div><?php get_template_part('/template-parts/button-action', '', array('label' => $label, 'url' => $url, 'classButton' => $classButton))?></div>
                         </div>
                         <div class="col-lg-6 col-xs-12 p-3">
                             <?php the_post_thumbnail('full', array(
@@ -52,7 +53,7 @@ $data = new WP_Query(array(
                             <h2 class="info-section-title"><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                             <div>
-                                <?php get_template_part('/template-parts/button-action', '', array('label' => $label, 'url' => get_field('url_video', $data->ID)))?>
+                                <?php get_template_part('/template-parts/button-action', '', array('label' => $label, 'url' => $url, 'classButton' => $classButton))?>
                             </div>
                         </div>
                     </article>

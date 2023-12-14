@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: FAQ Page
  * Template Post Type: Page
@@ -28,7 +27,7 @@ get_header();
                             <form>
                                 <div class="d-flex search-wrapper">
                                     <input type="text" class="form-control bs-input" placeholder="Escriba su pregunta..." name="search" value="<?php echo $search_data ?>" />
-                                    <button class="btn bs-input-button" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+                                    <button class="btn bs-input-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 </div>
                             </form>
                         </div>

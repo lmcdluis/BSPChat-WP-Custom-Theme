@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: Price Page
  * Template Post Type: Page

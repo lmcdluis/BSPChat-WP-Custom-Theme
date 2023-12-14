@@ -4,6 +4,7 @@
  "start_url": "./?utm_source=web_app_manifest",
  "display": "standalone",
  "theme_color": "#2F2E41",
+ "id": "/wp-content/themes/bs-chat-theme/img/favicon/?utm_source=web_app_manifest",
  "icons": [
   {
    "src": "/wp-content/themes/bs-chat-theme/img/favicon/android-icon-36x36.png",

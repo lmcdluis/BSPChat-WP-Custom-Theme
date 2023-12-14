@@ -81,6 +81,7 @@ define( 'WP_DEBUG', false );
 
 define('ALLOW_UNFILTERED_UPLOADS', true);
 
+define( 'WP_ENVIRONMENT_TYPE', 'local' );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

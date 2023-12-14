@@ -31,7 +31,7 @@ $data = new WP_Query(array(
                         <div class="row buttons-container">
                             <div class="col-lg-6 col-xs-12">
                                 <div class="buttons-slier-wrapper text-center">
-                                    <a href="<?php echo get_field('url_video', $data->ID) ?>" class="btn btn-green">Ver video demostrativo</a>
+                                <?php get_template_part('/template-parts/button-action', '', array('label' => 'Ver video demostrativo', 'url' => '#demo-modal', 'classButton' => 'video-button'))?>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@ $data = new WP_Query(array(
                     </div>
                     <div class="col-md-4 col-xs-12">
                         <?php the_post_thumbnail('full', array(
-                            'class' => 'img-fluid',
+                            'class' => 'img-fluid, img-carousel',
                             'alt' => get_the_title(),
                             'loading' => 'lazy'
                         )); ?>

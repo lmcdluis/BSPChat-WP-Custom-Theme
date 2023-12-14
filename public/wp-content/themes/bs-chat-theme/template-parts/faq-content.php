@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This template is for content of faq
  * @package bs_chat
@@ -27,7 +26,7 @@ $get_faq_data = new WP_Query($faq_args);
             while ($get_faq_data->have_posts()) : $get_faq_data->the_post();
         ?>
                 <div class="col-lg-6 col-xs-12 p-4 faq-wrapper">
-                    <h4><i class="fa-light fa-messages-question"></i>&nbsp;<?php the_title(); ?></h4>
+                    <h4><i class="fa-regular fa-comment"></i>&nbsp;<?php the_title(); ?></h4>
                     <?php the_content(); ?>
                 </div>
         <?php endwhile;

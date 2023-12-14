@@ -1,7 +1,6 @@
 <?php 
 /** this template is for content of pages */
 ?>
-
 <div class="post-inner <?php echo is_page_template( 'templates/full-width-page.php' ) ? '' : 'thin'; ?> ">
 
     <div class="entry-content">

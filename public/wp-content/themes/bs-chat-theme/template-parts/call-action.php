@@ -1,5 +1,4 @@
 <?php
-
 /** 
  * This is template for call action section
  * @package bs-chat

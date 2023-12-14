@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: Full width Page
  * @package bsp_chat

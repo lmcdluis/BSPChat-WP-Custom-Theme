@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This template is for content of prices
  * @package bs_chat
@@ -15,7 +14,7 @@ $price_args = array(
     'order' => 'ASC'
 );
 $get_prices_data = new WP_Query($price_args); ?>
-<div class="container my-4">
+<div class="container my-4 remodal-bg">
     <div class="row">
         <?php if ($get_prices_data->have_posts()) : ?>
 
@@ -26,14 +25,14 @@ $get_prices_data = new WP_Query($price_args); ?>
                     <?php if(get_field('recomendado', $get_prices_data->ID)) { 
                        echo '<span class="popular-tag">Popular</span>';
                     } ?>
-                        <div class="card-header">
+                        <div class="card-header bg-dark-secondary">
                         <h4 class="title-price-card"><?php the_title(); ?></h4>
                         </div>
                         <div class="card-body body-card-price">
                             <div class="d-flex">
                                 <span class="display-4">$</span>&nbsp;
                                 <div class="d-grid">
-                                    <span class="display-4 fw-bold"><?php the_field('price', $get_prices_data->ID) ?></span>
+                                    <span class="display-4 fw-bold price-number"><?php the_field('price', $get_prices_data->ID) ?></span>
                                     <span class="text-secondary h4">Por mes +</span>
                                 </div>
                             </div>
@@ -51,7 +50,7 @@ $get_prices_data = new WP_Query($price_args); ?>
                         </div>
                         <div class="card-footer">
                         <div class="d-grid d-md-block text-center my-4">
-                                <a href="#" class="btn btn-green">Contratar plan</a>
+                                <a href="<?php echo esc_url('#contact-modal')?>" class="btn btn-black">Contratar plan</a>
                             </div>
                         </div>
                     </div>
@@ -60,4 +59,8 @@ $get_prices_data = new WP_Query($price_args); ?>
             wp_reset_postdata();
         endif; ?>
     </div>
+    <div data-remodal-id="contact-modal" class="remodal" data-remodal-options="closeOnOutsideClick: false, closeOnEscape: false">
+   <button data-remodal-action="close" class="remodal-close" id="close-modal-contact"></button>
+   <?php echo do_shortcode('[wpforms id="217"]')?>
+</div>
 </div>

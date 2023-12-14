@@ -1,5 +1,4 @@
 <?php
-
 /**
  *  Template for feature integration
  * @package bs-chat
@@ -13,7 +12,7 @@ $data = new WP_Query(array(
     'order' => 'ASC'
 ))
 ?>
-<div class="bg-dark">
+<div class="bg-dark-secondary">
     <div class="container">
         <div class="row p-5">
             <div class="col-12 my-4"><h2 class="title-feature-section">Explora las características de integración</h2></div>
@@ -21,7 +20,7 @@ $data = new WP_Query(array(
             if($data->have_posts()) :
                 while($data->have_posts()) : $data->the_post();
             ?>
-            <div class="col-lg-3 col-xs-12 feature-col">
+            <div class="col-lg-3 col-xs-12 col-md-6 feature-col">
                 <?php 
                 the_post_thumbnail('feature-icon', array(
                     'class' => 'img-fluid',
